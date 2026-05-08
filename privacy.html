@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SpeedTrack — Gizlilik Politikası / Privacy Policy</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0a0a0c;--surface:#151519;--border:#252530;--text:#d8d8dd;--dim:#888;--accent:#ff9500;--font:'DM Sans',system-ui,sans-serif}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--bg);color:var(--text);font-family:var(--font);line-height:1.7;font-size:15px}
+.wrap{max-width:720px;margin:0 auto;padding:40px 24px 80px}
+.logo{text-align:center;margin-bottom:32px}
+.logo h1{font-size:28px;font-weight:700;color:var(--accent);letter-spacing:1px}
+.logo small{color:var(--dim);font-size:13px}
+.lang{display:flex;gap:8px;justify-content:center;margin-bottom:32px}
+.lang button{padding:8px 20px;border-radius:8px;border:1.5px solid var(--border);background:transparent;color:var(--dim);font-size:13px;font-weight:600;cursor:pointer;font-family:var(--font)}
+.lang button.active{background:var(--accent);color:#000;border-color:var(--accent)}
+.section{display:none}
+.section.active{display:block}
+h2{font-size:20px;font-weight:700;color:var(--accent);margin:28px 0 12px;padding-bottom:8px;border-bottom:1px solid var(--border)}
+h3{font-size:16px;font-weight:600;color:var(--text);margin:20px 0 8px}
+p,ul{margin-bottom:12px}
+ul{padding-left:20px}
+li{margin-bottom:6px}
+a{color:var(--accent)}
+.footer{text-align:center;margin-top:48px;padding-top:24px;border-top:1px solid var(--border);color:var(--dim);font-size:12px}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="logo">
+    <h1>🛣 SpeedTrack</h1>
+    <small>by SouthIonic</small>
+  </div>
+  <div class="lang">
+    <button class="active" onclick="switchLang('tr')">Türkçe</button>
+    <button onclick="switchLang('en')">English</button>
+  </div>
+
+  <!-- TÜRKÇE -->
+  <div class="section active" id="tr">
+    <h2>Gizlilik Politikası</h2>
+    <p><strong>Son güncelleme:</strong> 2026</p>
+
+    <h3>1. Veri Sorumlusu</h3>
+    <p>SouthIonic ("biz"), SpeedTrack uygulamasının geliştiricisidir. Kişisel verilerinizin korunması konusunda 6698 sayılı KVKK ve ilgili mevzuata uygun hareket etmekteyiz.</p>
+
+    <h3>2. Toplanan Veriler</h3>
+    <p>SpeedTrack aşağıdaki verileri toplar:</p>
+    <ul>
+      <li><strong>Konum verisi:</strong> GPS koordinatları, yalnızca uygulama aktif kullanımdayken, hız ve mesafe hesaplaması için kullanılır.</li>
+      <li><strong>Sürüş verileri:</strong> Ortalama hız, mesafe, süre — cihazınızda yerel olarak saklanır.</li>
+    </ul>
+    <p>Aşağıdaki verileri <strong>toplamayız:</strong></p>
+    <ul>
+      <li>Ad, soyad, e-posta adresi veya telefon numarası</li>
+      <li>Cihaz kimlik bilgileri</li>
+      <li>Konum geçmişi (sunucuya gönderilmez)</li>
+    </ul>
+
+    <h3>3. Verilerin Kullanımı</h3>
+    <p>Konum verisi yalnızca hız hesaplaması ve koridor algılama için kullanılır. Verileriniz üçüncü taraflarla paylaşılmaz, sunucuya gönderilmez ve reklam amacıyla kullanılmaz.</p>
+
+    <h3>4. Veri Saklama</h3>
+    <p>Sürüş geçmişi yalnızca cihazınızda (AsyncStorage) saklanır. Uygulama silindiğinde tüm veriler otomatik olarak silinir.</p>
+
+    <h3>5. Koridor ve Kamera Verileri</h3>
+    <p>Uygulama, hız koridoru ve kamera konum bilgilerini sunucudan indirir. Bu veriler genel bilgi niteliğindedir ve kişisel veri içermez.</p>
+
+    <h3>6. Üçüncü Taraf Hizmetler</h3>
+    <p>SpeedTrack, veri senkronizasyonu için Supabase altyapısını kullanır. Supabase'e yalnızca anonim veri sorguları gönderilir; kişisel veri aktarılmaz.</p>
+
+    <h3>7. Haklarınız</h3>
+    <p>KVKK kapsamında kişisel verilerinize erişim, düzeltme, silme ve itiraz haklarına sahipsiniz. Taleplerinizi aşağıdaki iletişim adresi üzerinden iletebilirsiniz.</p>
+
+    <h3>8. İletişim</h3>
+    <p>E-posta: <a href="mailto:southionic@gmail.com">southionic@gmail.com</a></p>
+
+    <h3>9. Değişiklikler</h3>
+    <p>Bu politika güncellenebilir. Önemli değişiklikler uygulama içinden bildirilir.</p>
+  </div>
+
+  <!-- ENGLISH -->
+  <div class="section" id="en">
+    <h2>Privacy Policy</h2>
+    <p><strong>Last updated:</strong> 2026</p>
+
+    <h3>1. Data Controller</h3>
+    <p>SouthIonic ("we") is the developer of SpeedTrack. We are committed to protecting your personal data in accordance with applicable privacy regulations.</p>
+
+    <h3>2. Data We Collect</h3>
+    <p>SpeedTrack collects the following data:</p>
+    <ul>
+      <li><strong>Location data:</strong> GPS coordinates, only while the app is actively in use, for speed and distance calculations.</li>
+      <li><strong>Driving data:</strong> Average speed, distance, duration — stored locally on your device.</li>
+    </ul>
+    <p>We <strong>do not</strong> collect:</p>
+    <ul>
+      <li>Name, email address, or phone number</li>
+      <li>Device identifiers</li>
+      <li>Location history (not sent to any server)</li>
+    </ul>
+
+    <h3>3. How We Use Data</h3>
+    <p>Location data is used solely for speed calculation and corridor detection. Your data is not shared with third parties, not sent to servers, and not used for advertising.</p>
+
+    <h3>4. Data Storage</h3>
+    <p>Driving history is stored only on your device (AsyncStorage). All data is automatically deleted when the app is uninstalled.</p>
+
+    <h3>5. Corridor and Camera Data</h3>
+    <p>The app downloads speed corridor and camera location data from our server. This is general information and does not contain personal data.</p>
+
+    <h3>6. Third-Party Services</h3>
+    <p>SpeedTrack uses Supabase infrastructure for data synchronization. Only anonymous data queries are sent to Supabase; no personal data is transferred.</p>
+
+    <h3>7. Your Rights</h3>
+    <p>You have the right to access, correct, delete, and object to the processing of your personal data. Please contact us at the address below.</p>
+
+    <h3>8. Contact</h3>
+    <p>Email: <a href="mailto:southionic@gmail.com">southionic@gmail.com</a></p>
+
+    <h3>9. Changes</h3>
+    <p>This policy may be updated. Significant changes will be communicated through the app.</p>
+  </div>
+
+  <div class="footer">
+    &copy; 2026 SouthIonic. All rights reserved.
+  </div>
+</div>
+
+<script>
+function switchLang(lang) {
+  document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+  document.getElementById(lang).classList.add('active');
+  document.querySelectorAll('.lang button').forEach(b => b.classList.remove('active'));
+  event.target.classList.add('active');
+}
+</script>
+</body>
+</html>

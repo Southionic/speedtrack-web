@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SpeedTrack — Destek / Support</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0a0a0c;--surface:#151519;--border:#252530;--text:#d8d8dd;--dim:#888;--accent:#ff9500;--font:'DM Sans',system-ui,sans-serif}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--bg);color:var(--text);font-family:var(--font);line-height:1.7;font-size:15px}
+.wrap{max-width:720px;margin:0 auto;padding:40px 24px 80px}
+.logo{text-align:center;margin-bottom:40px}
+.logo h1{font-size:28px;font-weight:700;color:var(--accent);letter-spacing:1px}
+.logo small{color:var(--dim);font-size:13px}
+.lang{display:flex;gap:8px;justify-content:center;margin-bottom:32px}
+.lang button{padding:8px 20px;border-radius:8px;border:1.5px solid var(--border);background:transparent;color:var(--dim);font-size:13px;font-weight:600;cursor:pointer;font-family:var(--font)}
+.lang button.active{background:var(--accent);color:#000;border-color:var(--accent)}
+.section{display:none}
+.section.active{display:block}
+h2{font-size:22px;font-weight:700;color:var(--accent);margin:28px 0 16px;text-align:center}
+.card{background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:24px;margin-bottom:16px}
+.card h3{font-size:16px;font-weight:600;color:var(--accent);margin-bottom:8px}
+.card p{color:var(--text);margin-bottom:0}
+.contact{text-align:center;margin-top:32px;padding:32px;background:var(--surface);border-radius:16px;border:2px solid var(--accent)}
+.contact a{color:var(--accent);font-size:18px;font-weight:700;text-decoration:none}
+.footer{text-align:center;margin-top:48px;padding-top:24px;border-top:1px solid var(--border);color:var(--dim);font-size:12px}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="logo">
+    <h1>🛣 SpeedTrack</h1>
+    <small>by SouthIonic</small>
+  </div>
+  <div class="lang">
+    <button class="active" onclick="switchLang('tr')">Türkçe</button>
+    <button onclick="switchLang('en')">English</button>
+  </div>
+
+  <!-- TÜRKÇE -->
+  <div class="section active" id="tr">
+    <h2>Destek</h2>
+
+    <div class="card">
+      <h3>📱 SpeedTrack Nedir?</h3>
+      <p>SpeedTrack, Türkiye'deki ortalama hız koridorlarını (EDS) takip eden akıllı bir sürüş asistanıdır. Koridora girdiğinizde otomatik algılar ve ortalama hızınızı gerçek zamanlı hesaplar.</p>
+    </div>
+
+    <div class="card">
+      <h3>📍 Konum İzni Neden Gerekli?</h3>
+      <p>SpeedTrack, hızınızı ve konumunuzu ölçmek için GPS kullanır. Konum verisi yalnızca cihazınızda işlenir, sunucuya gönderilmez.</p>
+    </div>
+
+    <div class="card">
+      <h3>🔋 Pil Tüketimi</h3>
+      <p>GPS kullanımı pil tüketimini artırabilir. Uzun yolculuklarda telefonunuzu şarja takmanızı öneririz.</p>
+    </div>
+
+    <div class="card">
+      <h3>💰 Satın Alma</h3>
+      <p>Tüm satın almalar tek seferlik olup Apple üzerinden gerçekleştirilir. İade için Apple Destek'e başvurun.</p>
+    </div>
+
+    <div class="card">
+      <h3>⚠️ Sorumluluk</h3>
+      <p>SpeedTrack bilgilendirme amaçlıdır. Trafik kurallarına uymak sürücünün sorumluluğundadır.</p>
+    </div>
+
+    <div class="contact">
+      <p style="color:var(--dim);margin-bottom:8px">Soru veya sorun mu var?</p>
+      <a href="mailto:southionic@gmail.com">southionic@gmail.com</a>
+    </div>
+  </div>
+
+  <!-- ENGLISH -->
+  <div class="section" id="en">
+    <h2>Support</h2>
+
+    <div class="card">
+      <h3>📱 What is SpeedTrack?</h3>
+      <p>SpeedTrack is a smart driving assistant that tracks average speed corridors (EDS) on Turkish highways. It automatically detects corridors and calculates your average speed in real-time.</p>
+    </div>
+
+    <div class="card">
+      <h3>📍 Why Location Permission?</h3>
+      <p>SpeedTrack uses GPS to measure your speed and location. Location data is processed only on your device and is not sent to any server.</p>
+    </div>
+
+    <div class="card">
+      <h3>🔋 Battery Usage</h3>
+      <p>GPS usage may increase battery consumption. We recommend plugging in your phone during long trips.</p>
+    </div>
+
+    <div class="card">
+      <h3>💰 Purchases</h3>
+      <p>All purchases are one-time and processed through Apple. For refunds, contact Apple Support.</p>
+    </div>
+
+    <div class="card">
+      <h3>⚠️ Disclaimer</h3>
+      <p>SpeedTrack is for informational purposes only. Compliance with traffic laws is the driver's responsibility.</p>
+    </div>
+
+    <div class="contact">
+      <p style="color:var(--dim);margin-bottom:8px">Have a question or issue?</p>
+      <a href="mailto:southionic@gmail.com">southionic@gmail.com</a>
+    </div>
+  </div>
+
+  <div class="footer">
+    &copy; 2026 SouthIonic. All rights reserved.
+  </div>
+</div>
+
+<script>
+function switchLang(lang) {
+  document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+  document.getElementById(lang).classList.add('active');
+  document.querySelectorAll('.lang button').forEach(b => b.classList.remove('active'));
+  event.target.classList.add('active');
+}
+</script>
+</body>
+</html>

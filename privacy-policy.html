@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SpeedTrack - Gizlilik Politikası / Privacy Policy</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+
+        :root {
+            --bg: #0a0a0c;
+            --surface: #131318;
+            --surface-2: #1a1a22;
+            --border: #2a2a35;
+            --text: #e8e8ed;
+            --text-secondary: #8e8e9a;
+            --accent: #4a9eff;
+            --accent-soft: rgba(74, 158, 255, 0.1);
+            --warning: #ffb84a;
+            --warning-soft: rgba(255, 184, 74, 0.08);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.7;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .lang-switcher {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 100;
+            display: flex;
+            gap: 4px;
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            padding: 4px;
+        }
+
+        .lang-btn {
+            padding: 8px 16px;
+            border: none;
+            background: transparent;
+            color: var(--text-secondary);
+            font-family: 'DM Sans', sans-serif;
+            font-size: 13px;
+            font-weight: 600;
+            cursor: pointer;
+            border-radius: 7px;
+            transition: all 0.2s;
+            letter-spacing: 0.5px;
+        }
+
+        .lang-btn.active {
+            background: var(--accent);
+            color: #fff;
+        }
+
+        .container {
+            max-width: 740px;
+            margin: 0 auto;
+            padding: 80px 24px 120px;
+        }
+
+        .header {
+            margin-bottom: 56px;
+        }
+
+        .app-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 10px 16px;
+            margin-bottom: 24px;
+        }
+
+        .app-icon {
+            width: 36px;
+            height: 36px;
+            background: linear-gradient(135deg, var(--accent), #2563eb);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .app-icon svg {
+            width: 20px;
+            height: 20px;
+            fill: white;
+        }
+
+        .app-badge-text {
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--text);
+        }
+
+        .app-badge-sub {
+            font-size: 11px;
+            color: var(--text-secondary);
+            font-weight: 400;
+        }
+
+        h1 {
+            font-size: 32px;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+            margin-bottom: 12px;
+            line-height: 1.2;
+        }
+
+        .last-updated {
+            font-size: 13px;
+            color: var(--text-secondary);
+            font-family: 'JetBrains Mono', monospace;
+        }
+
+        .kvkk-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: var(--warning-soft);
+            border: 1px solid rgba(255, 184, 74, 0.2);
+            border-radius: 8px;
+            padding: 6px 12px;
+            margin-top: 16px;
+            font-size: 12px;
+            font-weight: 600;
+            color: var(--warning);
+            letter-spacing: 0.3px;
+        }
+
+        .section {
+            margin-bottom: 40px;
+        }
+
+        h2 {
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 16px;
+            color: var(--text);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        h2 .section-num {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 12px;
+            color: var(--accent);
+            background: var(--accent-soft);
+            padding: 4px 8px;
+            border-radius: 6px;
+            font-weight: 500;
+        }
+
+        h3 {
+            font-size: 16px;
+            font-weight: 600;
+            margin: 20px 0 10px;
+            color: var(--text);
+        }
+
+        p {
+            color: var(--text-secondary);
+            margin-bottom: 12px;
+            font-size: 15px;
+        }
+
+        .data-grid {
+            display: grid;
+            gap: 12px;
+            margin: 16px 0;
+        }
+
+        .data-card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 16px 20px;
+        }
+
+        .data-card-title {
+            font-weight: 600;
+            font-size: 14px;
+            color: var(--text);
+            margin-bottom: 6px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .data-card-title .icon {
+            font-size: 16px;
+        }
+
+        .data-card p {
+            font-size: 13px;
+            margin-bottom: 0;
+            line-height: 1.6;
+        }
+
+        .highlight-box {
+            background: var(--accent-soft);
+            border: 1px solid rgba(74, 158, 255, 0.15);
+            border-radius: 12px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+
+        .highlight-box p {
+            color: var(--accent);
+            font-size: 14px;
+            font-weight: 500;
+            margin-bottom: 0;
+        }
+
+        .warning-box {
+            background: var(--warning-soft);
+            border: 1px solid rgba(255, 184, 74, 0.15);
+            border-radius: 12px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+
+        .warning-box p {
+            color: var(--warning);
+            font-size: 14px;
+            font-weight: 500;
+            margin-bottom: 0;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 12px 0;
+        }
+
+        ul li {
+            position: relative;
+            padding-left: 20px;
+            margin-bottom: 8px;
+            font-size: 14px;
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+
+        ul li::before {
+            content: '›';
+            position: absolute;
+            left: 4px;
+            color: var(--accent);
+            font-weight: 700;
+            font-size: 16px;
+        }
+
+        .rights-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 12px;
+            margin: 16px 0;
+        }
+
+        .right-item {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            padding: 14px 18px;
+        }
+
+        .right-item strong {
+            display: block;
+            font-size: 13px;
+            color: var(--text);
+            margin-bottom: 4px;
+        }
+
+        .right-item span {
+            font-size: 12px;
+            color: var(--text-secondary);
+            line-height: 1.5;
+        }
+
+        .contact-box {
+            background: var(--surface-2);
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            padding: 24px;
+            margin-top: 20px;
+        }
+
+        .contact-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 0;
+            border-bottom: 1px solid var(--border);
+            font-size: 14px;
+        }
+
+        .contact-row:last-child {
+            border-bottom: none;
+        }
+
+        .contact-label {
+            color: var(--text-secondary);
+            font-weight: 500;
+        }
+
+        .contact-value {
+            color: var(--text);
+            font-weight: 600;
+            text-align: right;
+        }
+
+        .contact-value a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        .divider {
+            height: 1px;
+            background: var(--border);
+            margin: 40px 0;
+        }
+
+        .footer {
+            text-align: center;
+            padding-top: 40px;
+            border-top: 1px solid var(--border);
+        }
+
+        .footer p {
+            font-size: 12px;
+            color: var(--text-secondary);
+        }
+
+        .lang-content { display: none; }
+        .lang-content.active { display: block; }
+
+        @media (max-width: 600px) {
+            .container { padding: 60px 16px 80px; }
+            h1 { font-size: 26px; }
+            .rights-grid { grid-template-columns: 1fr; }
+            .contact-row { flex-direction: column; gap: 4px; }
+            .contact-value { text-align: left; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="lang-switcher">
+    <button class="lang-btn active" onclick="switchLang('tr')">TR</button>
+    <button class="lang-btn" onclick="switchLang('en')">EN</button>
+</div>
+
+<div class="container">
+
+    <div class="header">
+        <div class="app-badge">
+            <div class="app-icon">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z"/></svg>
+            </div>
+            <div>
+                <div class="app-badge-text">SpeedTrack</div>
+                <div class="app-badge-sub">com.southionic.speedtrack</div>
+            </div>
+        </div>
+
+        <!-- TR Header -->
+        <div class="lang-content tr active">
+            <h1>Gizlilik Politikası ve<br>Kişisel Verilerin Korunması</h1>
+            <div class="last-updated">Son güncelleme: 2026</div>
+            <div class="kvkk-badge">
+                <span>⚖</span> 6698 Sayılı KVKK Uyumlu
+            </div>
+        </div>
+
+        <!-- EN Header -->
+        <div class="lang-content en">
+            <h1>Privacy Policy &<br>Personal Data Protection</h1>
+            <div class="last-updated">Last updated: 2026</div>
+            <div class="kvkk-badge">
+                <span>⚖</span> KVKK (Turkish Data Protection Law) Compliant
+            </div>
+        </div>
+    </div>
+
+    <!-- ======================== TURKISH ======================== -->
+    <div class="lang-content tr active">
+
+        <div class="section">
+            <h2><span class="section-num">01</span> Genel Bilgi</h2>
+            <p>SpeedTrack, Türkiye'deki resmi hız koridorlarında ortalama hız takibi yapmanızı sağlayan bir iOS uygulamasıdır. Bu gizlilik politikası, 6698 sayılı Kişisel Verilerin Korunması Kanunu ("KVKK"), Apple App Store gereksinimleri ve ilgili diğer mevzuat çerçevesinde hazırlanmıştır.</p>
+            <p><strong>Veri Sorumlusu:</strong> SouthIonic (bireysel geliştirici), Türkiye merkezli olarak faaliyet göstermektedir.</p>
+        </div>
+
+        <div class="section">
+            <h2><span class="section-num">02</span> Toplanan Veriler</h2>
+            <p>SpeedTrack, hizmetini sunmak için aşağıdaki verileri toplar ve işler:</p>
+
+            <div class="data-grid">
+                <div class="data-card">
+                    <div class="data-card-title"><span class="icon">📍</span> Konum Verisi</div>
+                    <p>Uygulama aktif kullanımdayken GPS konumunuz, hızınız ve hareket yönünüz. Bu veriler yalnızca cihazınızda işlenir ve ortalama hız hesaplaması ile koridor eşleştirmesi için kullanılır. Konum verisi hiçbir sunucuya gönderilmez.</p>
+                </div>
+                <div class="data-card">
+                    <div class="data-card-title"><span class="icon">🛣️</span> Ölçüm Geçmişi</div>
+                    <p>Tamamlanan hız ölçümleriniz (başlangıç/bitiş noktaları, ortalama hız, tarih). Bu veriler yalnızca cihazınızda yerel olarak saklanır.</p>
+                </div>
+                <div class="data-card">
+                    <div class="data-card-title"><span class="icon">🛒</span> Satın Alma Bilgisi</div>
+                    <p>Uygulama içi satın alma işlemleri Apple tarafından yönetilir. SpeedTrack, ödeme bilgilerinize (kredi kartı, banka bilgileri vb.) erişmez. Yalnızca satın alma durumunuz (aktif/pasif) cihazınızda kontrol edilir.</p>
+                </div>
+            </div>
+
+            <div class="highlight-box">
+                <p>🔒 SpeedTrack hesap oluşturma gerektirmez. Ad, soyad, e-posta, telefon numarası veya T.C. kimlik numarası gibi kimlik bilgileri toplanmaz.</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2><span class="section-num">03</span> Verilerin İşlenme Amacı ve Hukuki Dayanağı</h2>
+            <p>KVKK Madde 5 kapsamında, kişisel verileriniz aşağıdaki amaçlarla ve hukuki dayanaklarla işlenmektedir:</p>
+            <ul>
+                <li><strong>Konum verisi:</strong> Uygulamanın temel işlevini yerine getirmek (ortalama hız hesaplama ve koridor eşleştirme). Hukuki dayanak: Sözleşmenin ifası ve meşru menfaat.</li>
+                <li><strong>Ölçüm geçmişi:</strong> Kullanıcının geçmiş ölçümlerini görüntüleyebilmesi. Hukuki dayanak: Sözleşmenin ifası.</li>
+                <li><strong>Satın alma durumu:</strong> Ücretli özelliklerin sunulması. Hukuki dayanak: Sözleşmenin ifası.</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2><span class="section-num">04</span> Veri Saklama ve Güvenlik</h2>
+            <p>Tüm verileriniz yalnızca cihazınızda (on-device) saklanır. SpeedTrack herhangi bir uzak sunucuya, bulut hizmetine veya üçüncü taraf platformuna veri göndermez.</p>
+            <ul>
+                <li>Konum verisi yalnızca aktif ölçüm sırasında anlık olarak kullanılır ve ölçüm bittikten sonra anlık konum verisi saklanmaz.</li>
+                <li>Ölçüm geçmişi cihazınızın yerel depolama alanında tutulur.</li>
+                <li>Uygulamayı sildiğinizde tüm veriler otomatik olarak cihazınızdan kaldırılır.</li>
+            </ul>
+
+            <div class="warning-box">
+                <p>⚠ Hız koridoru verileri, İçişleri Bakanlığı ve Karayolları Genel Müdürlüğü (KGM) tarafından kamuya açık olarak paylaşılan bilgilerden derlenen anlık bir veri kopyasıdır. Uygulama, kamu kurumlarının sistemlerine canlı bağlantı kurmaz.</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2><span class="section-num">05</span> Üçüncü Taraflarla Veri Paylaşımı</h2>
+            <p>SpeedTrack, kişisel verilerinizi hiçbir üçüncü tarafla paylaşmaz. Uygulama reklam ağı, analitik SDK veya izleme (tracking) aracı içermez.</p>
+            <p>Uygulama içi satın alma işlemleri Apple'ın altyapısı üzerinden gerçekleşir ve Apple'ın kendi gizlilik politikasına tabidir.</p>
+        </div>
+
+        <div class="section">
+            <h2><span class="section-num">06</span> Konum İzni ve Arka Plan Kullanımı</h2>
+            <p>SpeedTrack, GPS tabanlı hız ölçümü için konum izninizi talep eder. Bu izin olmadan uygulamanın temel işlevi çalışmaz.</p>
+            <ul>
+                <li><strong>"Kullanılırken" (When In Use):</strong> Uygulama ön plandayken konum erişimi.</li>
+                <li><strong>Arka plan konumu:</strong> Aktif ölçüm sırasında ekranınız kapalıyken de doğru hız hesaplaması yapabilmek için arka plan konum erişimi kullanılabilir.</li>
+            </ul>
+            <p>Konum izninizi istediğiniz zaman iOS Ayarlar > Gizlilik ve Güvenlik > Konum Servisleri > SpeedTrack yolunu izleyerek değiştirebilir veya kaldırabilirsiniz.</p>
+        </div>
+
+        <div class="section">
+            <h2><span class="section-num">07</span> KVKK Kapsamında Haklarınız</h2>
+            <p>6698 sayılı KVKK'nın 11. maddesi uyarınca aşağıdaki haklara sahipsiniz:</p>
+
+            <div class="rights-grid">
+                <div class="right-item">
+                    <strong>Bilgi Edinme</strong>
+                    <span>Kişisel verilerinizin işlenip işlenmediğini öğrenme</span>
+                </div>
+                <div class="right-item">
+                    <strong>Bilgi Talep Etme</strong>
+                    <span>İşlenmişse buna ilişkin bilgi talep etme</span>
+                </div>
+                <div class="right-item">
+                    <strong>Amaç Öğrenme</strong>
+                    <span>İşlenme amacını ve amacına uygun kullanılıp kullanılmadığını öğrenme</span>
+                </div>
+                <div class="right-item">
+                    <strong>Üçüncü Kişiler</strong>
+                    <span>Yurt içinde/dışında aktarıldığı üçüncü kişileri bilme</span>
+                </div>
+                <div class="right-item">
+                    <strong>Düzeltme</strong>
+                    <span>Eksik veya yanlış işlenmişse düzeltilmesini isteme</span>
+                </div>
+                <div class="right-item">
+                    <strong>Silme / Yok Etme</strong>
+                    <span>KVKK Madde 7 çerçevesinde silinmesini/yok edilmesini isteme</span>
+                </div>
+                <div class="right-item">
+                    <strong>İtiraz</strong>
+                    <span>Otomatik analiz yoluyla aleyhinize bir sonuç çıkmasına itiraz etme</span>
+                </div>
+                <div class="right-item">
+                    <strong>Tazminat</strong>
+                    <span>Kanuna aykırı işleme sebebiyle zarara uğranması halinde tazminat talep etme</span>
+                </div>
+            </div>
+
+            <p>Haklarınızı kullanmak için aşağıdaki iletişim bilgilerinden bize ulaşabilirsiniz. Başvurunuz en geç 30 gün içinde ücretsiz olarak sonuçlandırılacaktır.</p>
+        </div>
+
+        <div class="section">
+            <h2><span class="section-num">08</span> Verilerin Silinmesi</h2>
+            <p>SpeedTrack hesap oluşturma gerektirmediğinden, tüm verileriniz cihazınızda saklanır. Verilerinizi silmek için:</p>
+            <ul>
+                <li>Uygulama içinden ölçüm geçmişinizi tek tek veya toplu olarak silebilirsiniz.</li>
+                <li>Uygulamayı cihazınızdan kaldırdığınızda tüm veriler otomatik olarak silinir.</li>
+                <li>Konum iznini kaldırdığınızda, yeni konum verisi işlenmez.</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2><span class="section-num">09</span> Çocukların Gizliliği</h2>
+            <p>SpeedTrack 17 yaş ve üzeri kullanıcılara yöneliktir. Bilerek 18 yaşından küçük bireylerden kişisel veri toplamayız. Bir ebeveyn veya vasinin, çocuğunun uygulamamızı kullandığını fark etmesi halinde bizimle iletişime geçmesini rica ederiz.</p>
+        </div>
+
+        <div class="section">
+            <h2><span class="section-num">10</span> Yurt Dışına Veri Aktarımı</h2>
+            <p>SpeedTrack, kişisel verileri yurt dışına aktarmaz. Tüm veri işleme, kullanıcının kendi cihazında gerçekleşir. Uygulama içi satın alma işlemleri Apple'ın küresel altyapısı üzerinden yönetilir ve Apple'ın veri koruma politikalarına tabidir.</p>
+        </div>
+
+        <div class="section">
+            <h2><span class="section-num">11</span> Politika Değişiklikleri</h2>
+            <p>Bu gizlilik politikası zaman zaman güncellenebilir. Önemli değişiklikler yapılması halinde, uygulama içinde bildirim yapılacaktır. Güncel politikayı her zaman bu sayfadan inceleyebilirsiniz.</p>
+        </div>
+
+        <div class="section">
+            <h2><span class="section-num">12</span> İletişim</h2>
+            <p>Gizlilik politikası, KVKK kapsamındaki haklarınız veya verilerinizle ilgili her türlü soru ve talepleriniz için:</p>
+            <div class="contact-box">
+                <div class="contact-row">
+                    <span class="contact-label">Geliştirici</span>
+                    <span class="contact-value">SouthIonic (Bireysel Geliştirici)</span>
+                </div>
+                <div class="contact-row">
+                    <span class="contact-label">E-posta</span>
+                    <span class="contact-value"><a href="mailto:southionic@gmail.com">southionic@gmail.com</a></span>
+                </div>
+                <div class="contact-row">
+                    <span class="contact-label">Ülke</span>
+                    <span class="contact-value">Türkiye</span>
+                </div>
+            </div>
+            <p style="margin-top: 16px; font-size: 13px;">KVKK kapsamında Kişisel Verileri Koruma Kurumu'na şikayette bulunma hakkınız saklıdır. Detaylı bilgi: <a href="https://www.kvkk.gov.tr" style="color: var(--accent);">kvkk.gov.tr</a></p>
+        </div>
+
+    </div>
+
+    <!-- ======================== ENGLISH ======================== -->
+    <div class="lang-content en">
+
+        <div class="section">
+            <h2><span class="section-num">01</span> Overview</h2>
+            <p>SpeedTrack is an iOS application that allows you to track your average speed through official speed enforcement corridors in Turkey. This privacy policy has been prepared in accordance with the Turkish Personal Data Protection Law No. 6698 ("KVKK"), Apple App Store requirements, and other applicable regulations.</p>
+            <p><strong>Data Controller:</strong> SouthIonic (individual developer), operating from Turkey.</p>
+        </div>
+
+        <div class="section">
+            <h2><span class="section-num">02</span> Data We Collect</h2>
+            <p>SpeedTrack collects and processes the following data to provide its service:</p>
+
+            <div class="data-grid">
+                <div class="data-card">
+                    <div class="data-card-title"><span class="icon">📍</span> Location Data</div>
+                    <p>Your GPS location, speed, and heading while the app is in active use. This data is processed only on your device for average speed calculation and corridor matching. No location data is sent to any server.</p>
+                </div>
+                <div class="data-card">
+                    <div class="data-card-title"><span class="icon">🛣️</span> Measurement History</div>
+                    <p>Completed speed measurements (start/end points, average speed, date). This data is stored locally on your device only.</p>
+                </div>
+                <div class="data-card">
+                    <div class="data-card-title"><span class="icon">🛒</span> Purchase Information</div>
+                    <p>In-app purchases are managed by Apple. SpeedTrack does not access your payment information (credit cards, bank details, etc.). Only your purchase status (active/inactive) is checked on your device.</p>
+                </div>
+            </div>
+
+            <div class="highlight-box">
+                <p>🔒 SpeedTrack does not require account creation. No identity information such as name, email, phone number, or national ID is collected.</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2><span class="section-num">03</span> Purpose and Legal Basis</h2>
+            <p>Under Article 5 of KVKK, your personal data is processed for the following purposes and legal bases:</p>
+            <ul>
+                <li><strong>Location data:</strong> To fulfill the app's core function (average speed calculation and corridor matching). Legal basis: Performance of contract and legitimate interest.</li>
+                <li><strong>Measurement history:</strong> To allow users to view past measurements. Legal basis: Performance of contract.</li>
+                <li><strong>Purchase status:</strong> To provide paid features. Legal basis: Performance of contract.</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2><span class="section-num">04</span> Data Storage and Security</h2>
+            <p>All your data is stored exclusively on your device (on-device). SpeedTrack does not transmit data to any remote server, cloud service, or third-party platform.</p>
+            <ul>
+                <li>Location data is used only in real-time during active measurement and is not stored after measurement ends.</li>
+                <li>Measurement history is kept in your device's local storage.</li>
+                <li>Deleting the app automatically removes all data from your device.</li>
+            </ul>
+
+            <div class="warning-box">
+                <p>⚠ Speed corridor data is a one-time snapshot compiled from publicly available information by the Ministry of Interior and General Directorate of Highways (KGM). The app does not make live connections to government systems.</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2><span class="section-num">05</span> Third-Party Data Sharing</h2>
+            <p>SpeedTrack does not share your personal data with any third party. The app contains no advertising networks, analytics SDKs, or tracking tools.</p>
+            <p>In-app purchases are processed through Apple's infrastructure and are subject to Apple's own privacy policy.</p>
+        </div>
+
+        <div class="section">
+            <h2><span class="section-num">06</span> Location Permission and Background Use</h2>
+            <p>SpeedTrack requests location permission for GPS-based speed measurement. The app's core functionality does not work without this permission.</p>
+            <ul>
+                <li><strong>"While Using" (When In Use):</strong> Location access while the app is in the foreground.</li>
+                <li><strong>Background location:</strong> Background location access may be used during active measurement to ensure accurate speed calculation even when your screen is off.</li>
+            </ul>
+            <p>You can change or revoke location permission at any time via iOS Settings > Privacy & Security > Location Services > SpeedTrack.</p>
+        </div>
+
+        <div class="section">
+            <h2><span class="section-num">07</span> Your Rights Under KVKK</h2>
+            <p>Under Article 11 of KVKK (Law No. 6698), you have the following rights:</p>
+
+            <div class="rights-grid">
+                <div class="right-item">
+                    <strong>Right to Know</strong>
+                    <span>Learn whether your personal data is being processed</span>
+                </div>
+                <div class="right-item">
+                    <strong>Request Information</strong>
+                    <span>Request details if data has been processed</span>
+                </div>
+                <div class="right-item">
+                    <strong>Purpose of Processing</strong>
+                    <span>Learn the purpose and whether data is used accordingly</span>
+                </div>
+                <div class="right-item">
+                    <strong>Third Parties</strong>
+                    <span>Know domestic/international third parties data is transferred to</span>
+                </div>
+                <div class="right-item">
+                    <strong>Correction</strong>
+                    <span>Request correction if data is incomplete or inaccurate</span>
+                </div>
+                <div class="right-item">
+                    <strong>Deletion / Destruction</strong>
+                    <span>Request deletion/destruction under KVKK Article 7</span>
+                </div>
+                <div class="right-item">
+                    <strong>Objection</strong>
+                    <span>Object to results of automated analysis against you</span>
+                </div>
+                <div class="right-item">
+                    <strong>Compensation</strong>
+                    <span>Claim compensation for damages from unlawful processing</span>
+                </div>
+            </div>
+
+            <p>To exercise your rights, please contact us using the information below. Your request will be processed free of charge within 30 days at the latest.</p>
+        </div>
+
+        <div class="section">
+            <h2><span class="section-num">08</span> Data Deletion</h2>
+            <p>Since SpeedTrack does not require account creation, all your data is stored on your device. To delete your data:</p>
+            <ul>
+                <li>You can delete your measurement history individually or in bulk from within the app.</li>
+                <li>Uninstalling the app automatically deletes all data from your device.</li>
+                <li>Revoking location permission stops any new location data from being processed.</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2><span class="section-num">09</span> Children's Privacy</h2>
+            <p>SpeedTrack is intended for users aged 17 and above. We do not knowingly collect personal data from individuals under 18. If a parent or guardian becomes aware that their child has used our app, we ask them to contact us.</p>
+        </div>
+
+        <div class="section">
+            <h2><span class="section-num">10</span> International Data Transfer</h2>
+            <p>SpeedTrack does not transfer personal data internationally. All data processing takes place on the user's own device. In-app purchases are managed through Apple's global infrastructure and are subject to Apple's data protection policies.</p>
+        </div>
+
+        <div class="section">
+            <h2><span class="section-num">11</span> Policy Changes</h2>
+            <p>This privacy policy may be updated from time to time. In case of significant changes, a notification will be provided within the app. You can always review the current policy on this page.</p>
+        </div>
+
+        <div class="section">
+            <h2><span class="section-num">12</span> Contact</h2>
+            <p>For any questions or requests regarding this privacy policy, your rights under KVKK, or your data:</p>
+            <div class="contact-box">
+                <div class="contact-row">
+                    <span class="contact-label">Developer</span>
+                    <span class="contact-value">SouthIonic (Individual Developer)</span>
+                </div>
+                <div class="contact-row">
+                    <span class="contact-label">Email</span>
+                    <span class="contact-value"><a href="mailto:southionic@gmail.com">southionic@gmail.com</a></span>
+                </div>
+                <div class="contact-row">
+                    <span class="contact-label">Country</span>
+                    <span class="contact-value">Turkey</span>
+                </div>
+            </div>
+            <p style="margin-top: 16px; font-size: 13px;">You have the right to file a complaint with the Turkish Personal Data Protection Authority (KVKK). Details: <a href="https://www.kvkk.gov.tr" style="color: var(--accent);">kvkk.gov.tr</a></p>
+        </div>
+
+    </div>
+
+    <div class="footer">
+        <p>© 2026 SpeedTrack — SouthIonic</p>
+        <p style="margin-top: 4px;">Bundle ID: com.southionic.speedtrack</p>
+    </div>
+
+</div>
+
+<script>
+function switchLang(lang) {
+    document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
+    document.querySelectorAll('.lang-content').forEach(el => el.classList.remove('active'));
+    
+    event.target.classList.add('active');
+    document.querySelectorAll('.lang-content.' + lang).forEach(el => el.classList.add('active'));
+}
+</script>
+
+</body>
+</html>

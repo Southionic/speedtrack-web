@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SpeedTrack - Kullanım Koşulları / Terms of Use</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+
+        :root {
+            --bg: #0a0a0c;
+            --surface: #131318;
+            --surface-2: #1a1a22;
+            --border: #2a2a35;
+            --text: #e8e8ed;
+            --text-secondary: #8e8e9a;
+            --accent: #4a9eff;
+            --accent-soft: rgba(74, 158, 255, 0.1);
+            --warning: #ffb84a;
+            --warning-soft: rgba(255, 184, 74, 0.08);
+            --red: #ff6b6b;
+            --red-soft: rgba(255, 107, 107, 0.08);
+            --green: #51cf66;
+            --green-soft: rgba(81, 207, 102, 0.08);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.7;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .lang-switcher {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 100;
+            display: flex;
+            gap: 4px;
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            padding: 4px;
+        }
+
+        .lang-btn {
+            padding: 8px 16px;
+            border: none;
+            background: transparent;
+            color: var(--text-secondary);
+            font-family: 'DM Sans', sans-serif;
+            font-size: 13px;
+            font-weight: 600;
+            cursor: pointer;
+            border-radius: 7px;
+            transition: all 0.2s;
+            letter-spacing: 0.5px;
+        }
+
+        .lang-btn.active {
+            background: var(--accent);
+            color: #fff;
+        }
+
+        .container {
+            max-width: 740px;
+            margin: 0 auto;
+            padding: 80px 24px 120px;
+        }
+
+        .header { margin-bottom: 56px; }
+
+        .app-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 10px 16px;
+            margin-bottom: 24px;
+        }
+
+        .app-icon {
+            width: 36px;
+            height: 36px;
+            background: linear-gradient(135deg, var(--accent), #2563eb);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .app-icon svg { width: 20px; height: 20px; fill: white; }
+        .app-badge-text { font-size: 14px; font-weight: 600; color: var(--text); }
+        .app-badge-sub { font-size: 11px; color: var(--text-secondary); font-weight: 400; }
+
+        h1 {
+            font-size: 32px;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+            margin-bottom: 12px;
+            line-height: 1.2;
+        }
+
+        .last-updated {
+            font-size: 13px;
+            color: var(--text-secondary);
+            font-family: 'JetBrains Mono', monospace;
+        }
+
+        .section { margin-bottom: 40px; }
+
+        h2 {
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 16px;
+            color: var(--text);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        h2 .section-num {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 12px;
+            color: var(--accent);
+            background: var(--accent-soft);
+            padding: 4px 8px;
+            border-radius: 6px;
+            font-weight: 500;
+        }
+
+        p {
+            color: var(--text-secondary);
+            margin-bottom: 12px;
+            font-size: 15px;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 12px 0;
+        }
+
+        ul li {
+            position: relative;
+            padding-left: 20px;
+            margin-bottom: 8px;
+            font-size: 14px;
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+
+        ul li::before {
+            content: '›';
+            position: absolute;
+            left: 4px;
+            color: var(--accent);
+            font-weight: 700;
+            font-size: 16px;
+        }
+
+        .highlight-box {
+            background: var(--accent-soft);
+            border: 1px solid rgba(74, 158, 255, 0.15);
+            border-radius: 12px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+
+        .highlight-box p {
+            color: var(--accent);
+            font-size: 14px;
+            font-weight: 500;
+            margin-bottom: 0;
+        }
+
+        .warning-box {
+            background: var(--red-soft);
+            border: 1px solid rgba(255, 107, 107, 0.15);
+            border-radius: 12px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+
+        .warning-box p {
+            color: var(--red);
+            font-size: 14px;
+            font-weight: 500;
+            margin-bottom: 0;
+        }
+
+        .info-box {
+            background: var(--green-soft);
+            border: 1px solid rgba(81, 207, 102, 0.15);
+            border-radius: 12px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+
+        .info-box p {
+            color: var(--green);
+            font-size: 14px;
+            font-weight: 500;
+            margin-bottom: 0;
+        }
+
+        .price-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 12px;
+            margin: 16px 0;
+        }
+
+        .price-card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .price-card .tier {
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--accent);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 8px;
+        }
+
+        .price-card .price {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--text);
+            margin-bottom: 6px;
+        }
+
+        .price-card .desc {
+            font-size: 12px;
+            color: var(--text-secondary);
+            line-height: 1.5;
+        }
+
+        .price-card .badge-once {
+            display: inline-block;
+            margin-top: 8px;
+            font-size: 11px;
+            font-weight: 600;
+            color: var(--green);
+            background: var(--green-soft);
+            padding: 3px 10px;
+            border-radius: 20px;
+        }
+
+        .contact-box {
+            background: var(--surface-2);
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            padding: 24px;
+            margin-top: 20px;
+        }
+
+        .contact-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 0;
+            border-bottom: 1px solid var(--border);
+            font-size: 14px;
+        }
+
+        .contact-row:last-child { border-bottom: none; }
+        .contact-label { color: var(--text-secondary); font-weight: 500; }
+        .contact-value { color: var(--text); font-weight: 600; text-align: right; }
+        .contact-value a { color: var(--accent); text-decoration: none; }
+
+        .footer {
+            text-align: center;
+            padding-top: 40px;
+            border-top: 1px solid var(--border);
+        }
+
+        .footer p { font-size: 12px; color: var(--text-secondary); }
+
+        .lang-content { display: none; }
+        .lang-content.active { display: block; }
+
+        @media (max-width: 600px) {
+            .container { padding: 60px 16px 80px; }
+            h1 { font-size: 26px; }
+            .price-grid { grid-template-columns: 1fr; }
+            .contact-row { flex-direction: column; gap: 4px; }
+            .contact-value { text-align: left; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="lang-switcher">
+    <button class="lang-btn active" onclick="switchLang('tr')">TR</button>
+    <button class="lang-btn" onclick="switchLang('en')">EN</button>
+</div>
+
+<div class="container">
+
+    <div class="header">
+        <div class="app-badge">
+            <div class="app-icon">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z"/></svg>
+            </div>
+            <div>
+                <div class="app-badge-text">SpeedTrack</div>
+                <div class="app-badge-sub">com.southionic.speedtrack</div>
+            </div>
+        </div>
+
+        <div class="lang-content tr active">
+            <h1>Kullanım Koşulları ve<br>Son Kullanıcı Lisans Sözleşmesi</h1>
+            <div class="last-updated">Son güncelleme: 2026</div>
+        </div>
+
+        <div class="lang-content en">
+            <h1>Terms of Use &<br>End User License Agreement</h1>
+            <div class="last-updated">Last updated: 2026</div>
+        </div>
+    </div>
+
+    <!-- ======================== TURKISH ======================== -->
+    <div class="lang-content tr active">
+
+        <div class="section">
+            <h2><span class="section-num">01</span> Sözleşme Tarafları ve Kabul</h2>
+            <p>Bu Son Kullanıcı Lisans Sözleşmesi ("Sözleşme"), SpeedTrack uygulamasının geliştiricisi SouthIonic ("Geliştirici") ile uygulamayı indiren ve kullanan siz ("Kullanıcı") arasında akdedilmiştir. Bu sözleşme Apple Inc. ile değil, yalnızca Geliştirici ile Kullanıcı arasındadır.</p>
+            <p>SpeedTrack'i indirerek veya kullanarak bu Sözleşme'nin tüm koşullarını kabul etmiş olursunuz. Koşulları kabul etmiyorsanız uygulamayı kullanmayınız.</p>
+            <p>Apple Inc., bu Sözleşme'nin üçüncü taraf lehdarı olup, bu sözleşmeyi uygulama hakkına sahiptir.</p>
+        </div>
+
+        <div class="section">
+            <h2><span class="section-num">02</span> Lisans Kapsamı</h2>
+            <p>Geliştirici, size SpeedTrack uygulamasını sahip olduğunuz veya kontrolünüz altındaki Apple markalı cihazlarda ve Apple Medya Hizmetleri Kullanım Koşulları'na uygun şekilde kullanmanız için devredilemez, münhasır olmayan bir lisans vermektedir.</p>
+            <ul>
+                <li>Uygulamayı bir ağ üzerinden birden fazla cihazda eş zamanlı olarak kullanamazsınız.</li>
+                <li>Uygulamayı devredemez, alt lisans veremez veya yeniden dağıtamazsınız.</li>
+                <li>Apple cihazınızı satmanız halinde, satış öncesinde uygulamayı cihazdan kaldırmalısınız.</li>
+                <li>Uygulamayı tersine mühendislik yapamaz, kaynak kodunu çıkaramaz, kopyalayamaz veya değiştiremezsiniz.</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2><span class="section-num">03</span> Uygulamanın Amacı ve Kullanım Sınırları</h2>
+            <p>SpeedTrack, Türkiye'deki resmi hız koridorlarında ortalama hız takibi yapmanızı sağlayan bir yardımcı araçtır.</p>
+
+            <div class="warning-box">
+                <p>⚠ <strong>ÖNEMLİ UYARI:</strong> SpeedTrack, resmi bir trafik uygulaması veya hız ölçüm cihazı DEĞİLDİR. Uygulama yalnızca bilgilendirme amaçlıdır. Gösterilen hız ve mesafe değerleri GPS doğruluğuna bağlı olup kesin sonuç garanti edilmez. Uygulamanın gösterdiği verilere dayanarak trafik kurallarını ihlal etmeniz halinde tüm sorumluluk size aittir.</p>
+            </div>
+
+            <p>Kullanıcı olarak aşağıdaki hususları kabul edersiniz:</p>
+            <ul>
+                <li>Uygulamayı kullanırken 2918 sayılı Karayolları Trafik Kanunu ve ilgili mevzuata tam uyum sağlayacağınızı.</li>
+                <li>Uygulamayı sürüş sırasında güvenliğinizi tehlikeye atacak şekilde kullanmayacağınızı.</li>
+                <li>GPS tabanlı hız ölçümünün çevresel faktörlere (tünel, yüksek binalar, hava koşulları) bağlı olarak hata payı içerebileceğini.</li>
+                <li>Koridor verilerinin belirli bir tarihteki kamuya açık bilgilerden derlenmiş anlık bir kopya olduğunu ve güncelliğinin garanti edilmediğini.</li>
+                <li>Uygulamayı yürürlükteki yasalara aykırı şekilde kullanmayacağınızı.</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2><span class="section-num">04</span> Uygulama İçi Satın Almalar</h2>
+            <p>SpeedTrack, freemium modeli ile çalışır. Ücretsiz sürüm temel özellikleri sunar; ek özellikler tek seferlik satın alma ile açılır.</p>
+
+            <div class="price-grid">
+                <div class="price-card">
+                    <div class="tier">Ücretsiz</div>
+                    <div class="price">₺0</div>
+                    <div class="desc">Manuel ölçüm</div>
+                </div>
+                <div class="price-card">
+                    <div class="tier">Güzergah Paketi</div>
+                    <div class="price">₺49</div>
+                    <div class="desc">Güzergah kaydetme ve yönetim</div>
+                    <div class="badge-once">Tek seferlik</div>
+                </div>
+                <div class="price-card">
+                    <div class="tier">Koridor Paketi</div>
+                    <div class="price">₺99</div>
+                    <div class="desc">Tüm builtin koridorlara erişim</div>
+                    <div class="badge-once">Tek seferlik</div>
+                </div>
+            </div>
+
+            <ul>
+                <li>Tüm satın almalar tek seferlik olup abonelik yoktur. Tekrarlayan ödeme alınmaz.</li>
+                <li>Satın alma işlemleri Apple'ın ödeme sistemi üzerinden gerçekleşir. Geliştirici ödeme bilgilerinize erişmez.</li>
+                <li>İade talepleri, 6502 sayılı Tüketicinin Korunması Hakkında Kanun ve Apple'ın iade politikası çerçevesinde değerlendirilir. Dijital içerik iade koşulları için Apple Destek'e başvurabilirsiniz.</li>
+                <li>Uygulamanın herhangi bir garanti koşuluna uymaması halinde Apple'a bildirimde bulunabilirsiniz ve Apple, uygulamanın satın alma bedelini iade edecektir.</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2><span class="section-num">05</span> Fikri Mülkiyet Hakları</h2>
+            <p>SpeedTrack uygulamasının tasarımı, kodu, arayüzü, simgeleri ve içeriği üzerindeki tüm fikri mülkiyet hakları Geliştirici'ye aittir. Bu Sözleşme ile size yalnızca kullanım lisansı verilmekte olup mülkiyet hakkı devredilmemektedir.</p>
+            <p>Uygulamanın veya Kullanıcının uygulamayı elinde bulundurması ve/veya kullanmasının herhangi bir üçüncü tarafın fikri mülkiyet haklarını ihlal ettiğine dair bir iddia ortaya çıkması halinde, Apple değil Geliştirici bu iddianın soruşturulması, savunulması, çözümlenmesi ve karşılanmasından sorumlu olacaktır.</p>
+        </div>
+
+        <div class="section">
+            <h2><span class="section-num">06</span> Sorumluluk Sınırlaması</h2>
+            <p>Yürürlükteki Türk hukuku ve 6502 sayılı Tüketicinin Korunması Hakkında Kanun çerçevesinde izin verilen azami ölçüde:</p>
+            <ul>
+                <li>SpeedTrack "olduğu gibi" (as-is) sunulmakta olup, açık veya zımni hiçbir garanti verilmemektedir.</li>
+                <li>Geliştirici, uygulamanın kullanımından kaynaklanan dolaylı, arızi, özel veya cezai zararlardan sorumlu tutulamaz.</li>
+                <li>Geliştirici'nin toplam sorumluluğu, kullanıcının uygulama için ödediği bedelle sınırlıdır.</li>
+                <li>GPS hataları, koridor verilerindeki eksiklikler veya güncelliğini yitirmiş bilgiler nedeniyle oluşabilecek trafik cezaları veya zararlardan Geliştirici sorumlu değildir.</li>
+            </ul>
+
+            <div class="highlight-box">
+                <p>ℹ Uygulamanın Apple'ın standart EULA'sı kapsamındaki garantilere uymaması halinde Apple'a bildirimde bulunabilir ve Apple satın alma bedelinizi iade eder. Bunun ötesinde, Apple'ın uygulama ile ilgili herhangi bir garanti yükümlülüğü bulunmamaktadır.</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2><span class="section-num">07</span> Bakım ve Destek</h2>
+            <p>Uygulama ile ilgili bakım ve destek hizmetleri yalnızca Geliştirici tarafından sağlanır. Apple'ın uygulama hakkında bakım veya destek sağlama yükümlülüğü bulunmamaktadır.</p>
+            <p>Geliştirici, uygulamayı güncelleme veya belirli özellikleri sürdürme konusunda herhangi bir garanti vermemektedir. Ancak, bilinen kritik hataların makul sürede giderilmesi için çaba gösterilecektir.</p>
+        </div>
+
+        <div class="section">
+            <h2><span class="section-num">08</span> Ürün Talepleri</h2>
+            <p>Kullanıcı ve Geliştirici, uygulamayla ilgili aşağıdaki taleplerin ele alınmasından Apple'ın değil, Geliştirici'nin sorumlu olduğunu kabul eder:</p>
+            <ul>
+                <li>Ürün sorumluluğu talepleri</li>
+                <li>Uygulamanın herhangi bir yasal veya düzenleyici gerekliliğe uymadığına dair talepler</li>
+                <li>Tüketici koruma, gizlilik veya benzeri mevzuat kapsamındaki talepler</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2><span class="section-num">09</span> Yasaklanan Kullanımlar</h2>
+            <ul>
+                <li>Uygulamayı hız sınırlarını aşmak veya trafik kurallarını ihlal etmek amacıyla kullanmak.</li>
+                <li>Uygulamayı tersine mühendislik yapmak, kaynak kodunu çözmek veya türev eserler üretmek.</li>
+                <li>Koridor verilerini çıkarmak, kopyalamak veya başka bir uygulamada/hizmette kullanmak.</li>
+                <li>Uygulamayı ticari amaçla yeniden dağıtmak veya alt lisanslamak.</li>
+                <li>Uygulamayı herhangi bir yasadışı faaliyette kullanmak.</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2><span class="section-num">10</span> Sözleşmenin Feshi</h2>
+            <p>Bu Sözleşme, siz veya Geliştirici tarafından feshedilene kadar yürürlükte kalır. Sözleşme koşullarından herhangi birine uymamanız halinde, bu Sözleşme kapsamındaki haklarınız otomatik olarak sona erer.</p>
+            <p>Uygulamayı cihazınızdan silerek bu Sözleşme'yi istediğiniz zaman feshedebilirsiniz.</p>
+        </div>
+
+        <div class="section">
+            <h2><span class="section-num">11</span> Uygulanacak Hukuk ve Uyuşmazlık Çözümü</h2>
+            <p>Bu Sözleşme, Türkiye Cumhuriyeti hukukuna tabidir. Sözleşme'den doğan uyuşmazlıklarda Ankara Mahkemeleri ve İcra Daireleri yetkilidir.</p>
+            <p>Tüketici haklarınız saklıdır. 6502 sayılı Tüketicinin Korunması Hakkında Kanun kapsamında Tüketici Hakem Heyetleri ve Tüketici Mahkemeleri'ne başvuru hakkınız bulunmaktadır.</p>
+        </div>
+
+        <div class="section">
+            <h2><span class="section-num">12</span> Gizlilik</h2>
+            <p>Kişisel verilerinizin işlenmesine ilişkin detaylı bilgi için <a href="privacy-policy.html" style="color: var(--accent);">Gizlilik Politikamızı</a> inceleyiniz. Gizlilik Politikası bu Sözleşme'nin ayrılmaz bir parçasıdır.</p>
+        </div>
+
+        <div class="section">
+            <h2><span class="section-num">13</span> Değişiklikler</h2>
+            <p>Geliştirici, bu Sözleşme'yi zaman zaman güncelleme hakkını saklı tutar. Önemli değişiklikler yapılması halinde uygulama içinden bildirim yapılacaktır. Değişikliklerden sonra uygulamayı kullanmaya devam etmeniz, güncellenmiş koşulları kabul ettiğiniz anlamına gelir.</p>
+        </div>
+
+        <div class="section">
+            <h2><span class="section-num">14</span> İletişim</h2>
+            <p>Bu Sözleşme ile ilgili her türlü soru ve talepleriniz için:</p>
+            <div class="contact-box">
+                <div class="contact-row">
+                    <span class="contact-label">Geliştirici</span>
+                    <span class="contact-value">SouthIonic (Bireysel Geliştirici)</span>
+                </div>
+                <div class="contact-row">
+                    <span class="contact-label">E-posta</span>
+                    <span class="contact-value"><a href="mailto:southionic@gmail.com">southionic@gmail.com</a></span>
+                </div>
+                <div class="contact-row">
+                    <span class="contact-label">Ülke</span>
+                    <span class="contact-value">Türkiye</span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- ======================== ENGLISH ======================== -->
+    <div class="lang-content en">
+
+        <div class="section">
+            <h2><span class="section-num">01</span> Parties and Acceptance</h2>
+            <p>This End User License Agreement ("Agreement") is entered into between SouthIonic ("Developer"), the developer of SpeedTrack, and you ("User"), who downloads and uses the application. This Agreement is between the Developer and the User only, and not with Apple Inc.</p>
+            <p>By downloading or using SpeedTrack, you accept all terms of this Agreement. If you do not accept these terms, do not use the application.</p>
+            <p>Apple Inc. is a third-party beneficiary of this Agreement and has the right to enforce its terms.</p>
+        </div>
+
+        <div class="section">
+            <h2><span class="section-num">02</span> Scope of License</h2>
+            <p>The Developer grants you a non-transferable, non-exclusive license to use SpeedTrack on any Apple-branded devices that you own or control, and as permitted by the Apple Media Services Terms and Conditions.</p>
+            <ul>
+                <li>You may not make the application available over a network for simultaneous use on multiple devices.</li>
+                <li>You may not transfer, sublicense, or redistribute the application.</li>
+                <li>If you sell your Apple device, you must remove the application before doing so.</li>
+                <li>You may not reverse engineer, decompile, copy, or modify the application.</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2><span class="section-num">03</span> Purpose and Limitations of Use</h2>
+            <p>SpeedTrack is a utility tool that allows you to track your average speed through official speed enforcement corridors in Turkey.</p>
+
+            <div class="warning-box">
+                <p>⚠ <strong>IMPORTANT NOTICE:</strong> SpeedTrack is NOT an official traffic enforcement application or speed measurement device. The app is for informational purposes only. Speed and distance values shown are dependent on GPS accuracy and are not guaranteed to be exact. You are solely responsible for any traffic violations committed while relying on the app's data.</p>
+            </div>
+
+            <p>As a User, you acknowledge and agree that:</p>
+            <ul>
+                <li>You will fully comply with Turkish Highway Traffic Law No. 2918 and all applicable regulations while using the app.</li>
+                <li>You will not use the app in any way that compromises your safety while driving.</li>
+                <li>GPS-based speed measurement may contain margin of error due to environmental factors (tunnels, tall buildings, weather conditions).</li>
+                <li>Corridor data is a snapshot compiled from publicly available information at a specific date, and its currency is not guaranteed.</li>
+                <li>You will not use the app in violation of any applicable law.</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2><span class="section-num">04</span> In-App Purchases</h2>
+            <p>SpeedTrack operates on a freemium model. The free version offers basic features; additional features are unlocked through one-time purchases.</p>
+
+            <div class="price-grid">
+                <div class="price-card">
+                    <div class="tier">Free</div>
+                    <div class="price">₺0</div>
+                    <div class="desc">Manual measurement</div>
+                </div>
+                <div class="price-card">
+                    <div class="tier">Route Pack</div>
+                    <div class="price">₺49</div>
+                    <div class="desc">Route saving & management</div>
+                    <div class="badge-once">One-time</div>
+                </div>
+                <div class="price-card">
+                    <div class="tier">Corridor Pack</div>
+                    <div class="price">₺99</div>
+                    <div class="desc">All built-in corridors</div>
+                    <div class="badge-once">One-time</div>
+                </div>
+            </div>
+
+            <ul>
+                <li>All purchases are one-time; there are no subscriptions or recurring charges.</li>
+                <li>Purchases are processed through Apple's payment system. The Developer does not access your payment information.</li>
+                <li>Refund requests are handled in accordance with Turkish Consumer Protection Law No. 6502 and Apple's refund policy. For digital content refund conditions, please contact Apple Support.</li>
+                <li>In the event the application fails to conform to any applicable warranty, you may notify Apple and Apple will refund the purchase price.</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2><span class="section-num">05</span> Intellectual Property</h2>
+            <p>All intellectual property rights in SpeedTrack's design, code, interface, icons, and content belong to the Developer. This Agreement grants you only a usage license; no ownership rights are transferred.</p>
+            <p>In the event of any third-party claim that the application or the User's possession and/or use of the application infringes that third party's intellectual property rights, the Developer, not Apple, will be responsible for the investigation, defense, settlement, and discharge of any such claim.</p>
+        </div>
+
+        <div class="section">
+            <h2><span class="section-num">06</span> Limitation of Liability</h2>
+            <p>To the maximum extent permitted by applicable Turkish law and Consumer Protection Law No. 6502:</p>
+            <ul>
+                <li>SpeedTrack is provided "as-is" without any express or implied warranties.</li>
+                <li>The Developer shall not be liable for any indirect, incidental, special, or punitive damages arising from use of the application.</li>
+                <li>The Developer's total liability is limited to the amount paid by the User for the application.</li>
+                <li>The Developer is not responsible for traffic fines or damages arising from GPS errors, corridor data inaccuracies, or outdated information.</li>
+            </ul>
+
+            <div class="highlight-box">
+                <p>ℹ In the event of the application's failure to conform to any applicable warranty, you may notify Apple and Apple will refund the purchase price. Beyond that, Apple has no warranty obligation with respect to the application.</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2><span class="section-num">07</span> Maintenance and Support</h2>
+            <p>Maintenance and support services for the application are provided solely by the Developer. Apple has no obligation to provide any maintenance or support services with respect to the application.</p>
+            <p>The Developer does not guarantee updates or continuity of specific features. However, reasonable efforts will be made to fix known critical issues in a timely manner.</p>
+        </div>
+
+        <div class="section">
+            <h2><span class="section-num">08</span> Product Claims</h2>
+            <p>The User and Developer acknowledge that the Developer, not Apple, is responsible for addressing any claims relating to the application, including but not limited to:</p>
+            <ul>
+                <li>Product liability claims</li>
+                <li>Claims that the application fails to conform to any applicable legal or regulatory requirement</li>
+                <li>Claims arising under consumer protection, privacy, or similar legislation</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2><span class="section-num">09</span> Prohibited Uses</h2>
+            <ul>
+                <li>Using the app to exceed speed limits or violate traffic regulations.</li>
+                <li>Reverse engineering, decompiling, or creating derivative works from the application.</li>
+                <li>Extracting, copying, or using corridor data in another application or service.</li>
+                <li>Redistributing or sublicensing the application for commercial purposes.</li>
+                <li>Using the application for any illegal activity.</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2><span class="section-num">10</span> Termination</h2>
+            <p>This Agreement remains in effect until terminated by you or the Developer. Your rights under this Agreement terminate automatically if you fail to comply with any of its terms.</p>
+            <p>You may terminate this Agreement at any time by deleting the application from your device.</p>
+        </div>
+
+        <div class="section">
+            <h2><span class="section-num">11</span> Governing Law and Dispute Resolution</h2>
+            <p>This Agreement is governed by the laws of the Republic of Turkey. Ankara Courts and Enforcement Offices have jurisdiction over disputes arising from this Agreement.</p>
+            <p>Your consumer rights are reserved. You have the right to apply to Consumer Arbitration Committees and Consumer Courts under Turkish Consumer Protection Law No. 6502.</p>
+        </div>
+
+        <div class="section">
+            <h2><span class="section-num">12</span> Privacy</h2>
+            <p>For detailed information about the processing of your personal data, please review our <a href="privacy-policy.html" style="color: var(--accent);">Privacy Policy</a>. The Privacy Policy is an integral part of this Agreement.</p>
+        </div>
+
+        <div class="section">
+            <h2><span class="section-num">13</span> Changes</h2>
+            <p>The Developer reserves the right to update this Agreement from time to time. In case of significant changes, a notification will be provided within the app. Your continued use of the application after changes constitutes acceptance of the updated terms.</p>
+        </div>
+
+        <div class="section">
+            <h2><span class="section-num">14</span> Contact</h2>
+            <p>For any questions or requests regarding this Agreement:</p>
+            <div class="contact-box">
+                <div class="contact-row">
+                    <span class="contact-label">Developer</span>
+                    <span class="contact-value">SouthIonic (Individual Developer)</span>
+                </div>
+                <div class="contact-row">
+                    <span class="contact-label">Email</span>
+                    <span class="contact-value"><a href="mailto:southionic@gmail.com">southionic@gmail.com</a></span>
+                </div>
+                <div class="contact-row">
+                    <span class="contact-label">Country</span>
+                    <span class="contact-value">Turkey</span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="footer">
+        <p>© 2026 SpeedTrack — SouthIonic</p>
+        <p style="margin-top: 4px;">Bundle ID: com.southionic.speedtrack</p>
+    </div>
+
+</div>
+
+<script>
+function switchLang(lang) {
+    document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
+    document.querySelectorAll('.lang-content').forEach(el => el.classList.remove('active'));
+    event.target.classList.add('active');
+    document.querySelectorAll('.lang-content.' + lang).forEach(el => el.classList.add('active'));
+}
+</script>
+
+</body>
+</html>
